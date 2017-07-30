@@ -2,12 +2,10 @@ package pl.devkamil;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 
-@SpringBootApplication
-@ComponentScan(basePackageClasses = com.devkamil.PageController.class)
+@SpringBootApplication(scanBasePackages = {"com.devkamil"})
 @EnableJpaRepositories(basePackageClasses = TaskRepository.class)
 public class Main {
 	

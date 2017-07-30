@@ -97,11 +97,5 @@ public class Task {
 		return "TaskEntity{ id=" + id + ", name=" + name + ", description=" + description + ", budget=" + budget + ", done="
 				+ done + "}";
 	}
-	
-	
-	
-	
-	
-	
 
 }

@@ -40,7 +40,7 @@ public class PageController {
 		taskRepository.save(task);
 		
 		for(Task i: taskRepository.findAll()) {
-			response.append(i).append("<br>");
+			response.append(i).append("<br><br>");
 		}
 		
 		return response.toString();
@@ -52,22 +52,22 @@ public class PageController {
 	public String testMethod2(){
 		StringBuilder response = new StringBuilder();
 		
-		response.append("Tasks with 'done' set to true: <br>");
+		response.append("<br><br>Tasks with 'done' set to true: <br>");
 		for(Task i: taskRepository.findByDone(true)){
 			response.append(i).append("<br>");
 		}
 		
-		response.append("Tasks with 'done' set to false: <br>");
+		response.append("<br><br>Tasks with 'done' set to false: <br>");
 		for(Task i: taskRepository.findByDone(false)){
 			response.append(i).append("<br>");
 		}
 		
-		response.append("Task with name: Task 1 : <br>");
+		response.append("<br><br>Task with name: Task 1 : <br>");
 		for (Task i: taskRepository.findByName("Task 1")){
 			response.append(i).append("<br>");
 		}
 		
-		response.append("Tasks with \"Do\" in description: <br>");
+		response.append("<br><br>Tasks with \"Do\" in description: <br>");
 		for(Task i: taskRepository.getByDescriptionLike("Do")){
 			response.append(i).append("<br>");
 		}
