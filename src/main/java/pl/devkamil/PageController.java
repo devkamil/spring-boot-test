@@ -12,6 +12,13 @@ public class PageController {
 	public TaskRepository taskRepository;
 	
 	
+	@RequestMapping("/loggeduser")
+	@ResponseBody
+	public String loggedUserAction(){
+		return "Hello User";
+	}
+	
+	
 	@RequestMapping("/h")
 	@ResponseBody
 	public String mainPage() {
