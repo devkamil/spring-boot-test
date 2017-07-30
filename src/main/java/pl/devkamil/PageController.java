@@ -1,20 +1,18 @@
-package com.devkamil;
+package pl.devkamil;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import pl.devkamil.Task;
-
 @Controller
 public class PageController {
 	
 	@Autowired
-	public pl.devkamil.TaskRepository taskRepository;
+	public TaskRepository taskRepository;
 	
 	
-	@RequestMapping("/")
+	@RequestMapping("/h")
 	@ResponseBody
 	public String mainPage() {
 		return "Hello World!";
@@ -40,7 +38,7 @@ public class PageController {
 		taskRepository.save(task);
 		
 		for(Task i: taskRepository.findAll()) {
-			response.append(i).append("<br><br>");
+			response.append(i).append("<br>");
 		}
 		
 		return response.toString();

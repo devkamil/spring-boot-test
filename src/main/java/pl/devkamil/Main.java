@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 
-@SpringBootApplication(scanBasePackages = {"com.devkamil"})
+@SpringBootApplication
 @EnableJpaRepositories(basePackageClasses = TaskRepository.class)
 public class Main {
 	

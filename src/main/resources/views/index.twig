@@ -1,0 +1,8 @@
+Hello World from view!
+<h3>{{greetings}}</h3>
+
+<ul>
+	{% for i in greetingsArray %}
+		<li> {{ loop.index+1}}. {{ i }} </li>
+	{% endfor %}
+</ul>
